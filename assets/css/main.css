@@ -4109,3 +4109,21 @@ input, select, textarea {
 					}
 
 	}
+	/* PNG icon 外层，复刻原 fa icon 圆形样式 */
+	.icon-image {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 5.5em;          /* 外圆稍微大一点 */
+	height: 5.5em;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.04);
+	margin-bottom: 1.5em;
+	}
+
+	.icon-image img {
+	width: 120%;            /* 关键：明显放大 */
+	height: 120%;
+	object-fit: contain;
+	}
+
