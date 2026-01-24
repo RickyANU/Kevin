@@ -26,7 +26,7 @@
 								</ul>
 							</li>
 							
-							<li><a href="#five" class="button primary">Enquiry</a></li>
+							<li><a href="#Enquiry" class="button primary">Enquiry</a></li>
 						</ul>
 					</nav>
 				</header>
@@ -175,20 +175,69 @@
 				</section>
 
 			<!-- Five -->
-				<section id="five" class="wrapper style2 special fade">
-					<div class="container">
-						<header>
-							<h2>Get Your Free Digital & E-commerce Assessment</h2>
-							<p>FREE Strategy Consultation & FREE review of your current website, e-commerce operations, and overall digital performance.</p>
-						</header>
-						<form method="post" action="#" class="cta">
-							<div class="row gtr-uniform gtr-50">
-								<div class="col-8 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Request a Free Assessment" /></div>
-								<div class="col-4 col-12-xsmall"><input type="submit" value="Get Started" class="fit primary" /></div>
-							</div>
-						</form>
+			<section id="Enquiry" class="wrapper style2 special fade">
+			<div class="container">
+				<header>
+				<h2>Get Your Free Digital & E-commerce Assessment</h2>
+				<p>
+					FREE Strategy Consultation & FREE review of your current website,
+					e-commerce operations, and overall digital performance.
+				</p>
+				</header>
+
+				<form class="cta" onsubmit="openInquiryEmail(event)">
+				<div class="row gtr-uniform gtr-50">
+					<div class="col-8 col-12-xsmall">
+					<input
+						type="email"
+						id="email"
+						placeholder="Enter your email address"
+						required
+					/>
 					</div>
-				</section>
+					<div class="col-4 col-12-xsmall">
+					<input
+						type="submit"
+						value="Get Started"
+						class="fit primary"
+					/>
+					</div>
+				</div>
+				</form>
+			</div>
+			</section>
+
+			<script>
+			function openInquiryEmail(e) {
+				e.preventDefault();
+
+				const email = document.getElementById("email").value;
+
+				const subject = encodeURIComponent(
+				"Free Digital & E-commerce Assessment Request"
+				);
+
+				const body = encodeURIComponent(
+				`Hi Luxcodex Team,
+
+			I would like to request a FREE Digital & E-commerce Assessment.
+
+			My contact email:
+			${email}
+
+			Please let me know the next steps.
+
+			Thanks,
+			`
+				);
+
+				window.location.href =
+				"mailto:inquiry@luxcodex.com" +
+				"?subject=" + subject +
+				"&body=" + body;
+			}
+			</script>
+
 
 			<!-- Footer -->
 				
